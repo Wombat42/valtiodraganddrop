@@ -1,0 +1,102 @@
+:root {
+  --gap: 10px;
+}
+
+.App {
+  font-family: sans-serif;
+  text-align: left;
+}
+
+h2 {
+  margin-top: 0px;
+  margin-bottom: 0.2rem;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: 60vw auto;
+  height: 80vh;
+  box-sizing: border-box;
+}
+.shape {
+  position: absolute;
+  border: 1px solid grey;
+  z-index: 1;
+  cursor: grab;
+}
+
+.shape:hover {
+  border: 1px dashed darkgreen;
+}
+
+.shape--selected {
+  cursor: grabbing;
+  background-color: lightblue;
+  z-index: 88;
+}
+
+.objectpanel {
+  border: 1px solid black;
+  z-index: 90;
+  position: relative;
+}
+.statuspanel {
+  position: relative;
+  z-index: 100;
+  display: grid;
+  grid-template-rows: 50% auto;
+  grid-row-gap: var(--gap);
+}
+
+.statuspanel .statuspanel-buttons > button {
+  margin-right: var(--gap);
+}
+
+.objectpanel,
+.statuspanel {
+  padding-left: var(--gap);
+  overflow: hidden;
+}
+
+.objecttable {
+  text-align: right;
+  width: 100%;
+  border: 1px solid lightgray;
+  margin-right: var(--gap);
+  box-sizing: border-box;
+  overflow: hidden;
+  display: grid;
+  grid-template-rows: 1.5rem auto;
+}
+
+.objecttable .objecttable-row {
+  display: grid;
+  grid-template-columns: 0.75fr 0.75fr 0.75fr 1fr 1fr;
+  line-height: 1.25rem;
+  padding: 0px var(--gap) 0px var(--gap);
+}
+
+.objecttable .objecttable-row .objecttable-row-id {
+  text-align: left;
+  overflow: hidden;
+  word-wrap: none;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.objecttable .objecttable-row--selected {
+  border-bottom: 4px solid lightblue;
+  border-top: 4px solid lightblue;
+}
+
+.objecttable .objecttable-heading {
+  text-transform: capitalize;
+  text-align: center;
+  border-bottom: 2px solid lightgrey;
+}
+
+.objecttable .objecttable-body {
+  position: relative;
+  box-sizing: border-box;
+  overflow: scroll;
+}
