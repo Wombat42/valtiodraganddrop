@@ -1,8 +1,8 @@
 {
-  "name": "valtio-drag-and-drop",
+  "name": "valtio-drag-and-drap",
   "version": "1.0.0",
-  "description": "",
-  "keywords": [],
+  "description": "A demo of Valtio",
+  "keywords": ["react", "valtio", "state"],
   "main": "src/index.js",
   "dependencies": {
     "random": "2.2.0",
